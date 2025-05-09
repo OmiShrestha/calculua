@@ -1,4 +1,4 @@
--- Terminal Calculator
+-- Calculua: A Terminal Calculator
 
 -- Function for addition
 local function addition(a, b)
@@ -95,7 +95,7 @@ while true do
         io.write("Enter the exponent: ")
         local exponent = tonumber(io.read())
         print("Result: ", power(base, exponent))
-        
+
     else
         io.write("Enter the first number: ")
         local num1 = tonumber(io.read())
