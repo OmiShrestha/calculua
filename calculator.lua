@@ -39,17 +39,33 @@ local function factorial(n)
     end
 end
 
+-- Function to calculate square root
+local function square_root(n)
+    if n < 0 then
+        return "Error: Square root of a negative number is undefined"
+    else
+        return math.sqrt(n)
+    end
+end
+
+-- Function to calculate power
+local function power(base, exponent)
+    return math.pow(base, exponent)
+end
+
 -- Main program loop
 while true do
-    print("\nSimple Calculator")
+    print("\n CALCULUA")
     print("1. Addition")
     print("2. Subtraction")
     print("3. Multiplication")
     print("4. Division")
     print("5. Factorial")
     print("6. Exit")
+    print("7. Square Root")
+    print("8. Power Calculation")
 
-    io.write("Choose an option (1-6): ") -- allows user to choose an input (number)
+    io.write("Choose an option (1-8): ") -- allows user to choose an input (number)
     local choice = tonumber(io.read())
 
     if choice == 6 then
@@ -57,7 +73,17 @@ while true do
         break
     end
 
-    if choice == 5 then
+    if choice == 7 then
+        io.write("Enter a number to calculate its square root: ")
+        local num = tonumber(io.read())
+        print("Result: ", square_root(num))
+    elseif choice == 8 then
+        io.write("Enter the base number: ")
+        local base = tonumber(io.read())
+        io.write("Enter the exponent: ")
+        local exponent = tonumber(io.read())
+        print("Result: ", power(base, exponent))
+    elseif choice == 5 then
         io.write("Enter a number to calculate its factorial: ")
         local num = tonumber(io.read())
         print("Result: ", factorial(num))
