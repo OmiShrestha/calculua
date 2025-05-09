@@ -55,29 +55,29 @@ end
 
 -- Main program loop
 while true do
-    print("\n CALCULUA")
+    print("\n ***** CALCULUA ******")
     print("1. Addition")
     print("2. Subtraction")
     print("3. Multiplication")
     print("4. Division")
     print("5. Factorial")
-    print("6. Exit")
-    print("7. Square Root")
-    print("8. Power Calculation")
+    print("6. Square Root")
+    print("7. Power")
+    print("8. Exit")
 
     io.write("Choose an option (1-8): ") -- allows user to choose an input (number)
     local choice = tonumber(io.read())
 
-    if choice == 6 then
-        print("Exiting the calculator. Goodbye!")
+    if choice == 8 then
+        print("Exiting the calculator.")
         break
     end
 
-    if choice == 7 then
+    if choice == 6 then
         io.write("Enter a number to calculate its square root: ")
         local num = tonumber(io.read())
         print("Result: ", square_root(num))
-    elseif choice == 8 then
+    elseif choice == 7 then
         io.write("Enter the base number: ")
         local base = tonumber(io.read())
         io.write("Enter the exponent: ")
