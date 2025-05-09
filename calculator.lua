@@ -1,4 +1,4 @@
--- Simple Calculator in Lua
+-- Terminal Calculator
 
 -- Function to perform addition
 local function add(a, b)
@@ -18,7 +18,7 @@ end
 -- Function to perform division
 local function divide(a, b)
     if b == 0 then
-        return "Error: Division by zero is not allowed."
+        return "Error: Division by zero"
     else
         return a / b
     end
@@ -33,7 +33,7 @@ while true do
     print("4. Division")
     print("5. Exit")
 
-    io.write("Choose an option (1-5): ")
+    io.write("Choose an option (1-5): ") -- allows user to choose an input (number)
     local choice = tonumber(io.read())
 
     if choice == 5 then
