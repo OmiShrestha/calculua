@@ -9,6 +9,8 @@ Calculua is a simple terminal-based calculator program written in Lua. It provid
 - Multiplication
 - Division
 - Factorial calculation
+- Square Root calculation
+- Power calculation
 
 ## How to Use
 
@@ -19,24 +21,28 @@ Calculua is a simple terminal-based calculator program written in Lua. It provid
    - Enter `3` for Multiplication
    - Enter `4` for Division
    - Enter `5` for Factorial calculation
-   - Enter `6` to Exit the program
+   - Enter `6` for Square Root calculation
+   - Enter `7` for Power calculation
+   - Enter `8` to Exit the program
 3. Input the required numbers as prompted.
 4. View the result displayed on the terminal.
 
 ## Example
 
 ```
-Simple Calculator
+ ***** CALCULUA ******
 1. Addition
 2. Subtraction
 3. Multiplication
 4. Division
 5. Factorial
-6. Exit
+6. Square Root
+7. Power
+8. Exit
 
-Choose an option (1-6): 5
-Enter a number to calculate its factorial: 5
-Result: 120
+Choose an option (1-8): 6
+Enter a number to calculate its square root: 16
+Result: 4.0
 ```
 
 ## Requirements
