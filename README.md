@@ -11,6 +11,7 @@ Calculua is a simple terminal-based calculator program written in Lua. It provid
 - Factorial 
 - Square Root
 - Power
+- View Calculation History (saved temporarily in `history.txt`)
 
 ## How to Use
 
@@ -23,7 +24,8 @@ Calculua is a simple terminal-based calculator program written in Lua. It provid
    - Enter `5` for Factorial 
    - Enter `6` for Square Root 
    - Enter `7` for Power
-   - Enter `8` to Exit
+   - Enter `8` to View Calculation History
+   - Enter `9` to Exit
 3. Input the required numbers as prompted.
 4. View the result displayed on the terminal.
 
@@ -38,9 +40,10 @@ Calculua is a simple terminal-based calculator program written in Lua. It provid
 5. Factorial
 6. Square Root
 7. Power
-8. Exit
+8. View Calculation History
+9. Exit
 
-Choose an option (1-8): 6
+Choose an option (1-9): 6
 Enter a number to calculate its square root: 16
 Result: 4.0
 ```
@@ -63,3 +66,7 @@ Result: 4.0
    ```bash
    lua calculator.lua
    ```
+
+## Notes
+
+- The calculation history is saved temporarily in a file named `history.txt` located in the same directory as the script. The history persists across sessions as long as the file is not deleted.
