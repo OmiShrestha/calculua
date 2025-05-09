@@ -1,3 +1,5 @@
+## Calculua
+
 Calculua is a simple terminal-based calculator program written in Lua. It provides basic arithmetic operations and additional features like factorial calculation.
 
 ## Features
