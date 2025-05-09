@@ -1,22 +1,22 @@
 -- Terminal Calculator
 
--- Function to perform addition
-local function add(a, b)
+-- Function for addition
+local function addition(a, b)
     return a + b
 end
 
--- Function to perform subtraction
-local function subtract(a, b)
+-- Function for subtraction
+local function subtraction(a, b)
     return a - b
 end
 
--- Function to perform multiplication
-local function multiply(a, b)
+-- Function for multiplication
+local function multiplication(a, b)
     return a * b
 end
 
--- Function to perform division
-local function divide(a, b)
+-- Function for division
+local function division(a, b)
     if b == 0 then
         return "Error: Division by zero"
     else
@@ -24,7 +24,7 @@ local function divide(a, b)
     end
 end
 
--- Function to calculate factorial
+-- Function for factorial
 local function factorial(n)
     if n < 0 then
         return "Error: Factorial of a negative number is undefined"
@@ -39,18 +39,18 @@ local function factorial(n)
     end
 end
 
--- Function to calculate square root
+-- Function for square root
 local function square_root(n)
     if n < 0 then
         return "Error: Square root of a negative number is undefined"
     else
-        return math.sqrt(n)
+        return math.sqrt(n) -- math library that provides the square root function
     end
 end
 
--- Function to calculate power
+-- Function for power
 local function power(base, exponent)
-    return math.pow(base, exponent)
+    return math.pow(base, exponent) -- math library that provides the power function
 end
 
 -- Main program loop
@@ -68,7 +68,7 @@ while true do
     print("7. Power")
     print("8. Exit")
 
-    io.write("Choose an option (1-8): ") -- allows user to choose an input (number)
+    io.write("Choose an option (1-8): ") -- allows user to choose an input a number
     local choice = tonumber(io.read())
 
     if choice == 8 then
@@ -76,20 +76,26 @@ while true do
         break
     end
 
-    if choice == 6 then
+    if 
+        choice == 5 then
+        io.write("Enter a number to calculate its factorial: ")
+        local num = tonumber(io.read())
+        print("Result: ", factorial(num))
+
+    elseif 
+        choice == 6 then
         io.write("Enter a number to calculate its square root: ")
         local num = tonumber(io.read())
         print("Result: ", square_root(num))
-    elseif choice == 7 then
+
+    elseif 
+        choice == 7 then
         io.write("Enter the base number: ")
         local base = tonumber(io.read())
         io.write("Enter the exponent: ")
         local exponent = tonumber(io.read())
         print("Result: ", power(base, exponent))
-    elseif choice == 5 then
-        io.write("Enter a number to calculate its factorial: ")
-        local num = tonumber(io.read())
-        print("Result: ", factorial(num))
+        
     else
         io.write("Enter the first number: ")
         local num1 = tonumber(io.read())
@@ -98,13 +104,13 @@ while true do
         local num2 = tonumber(io.read())
 
         if choice == 1 then
-            print("Result: ", add(num1, num2))
+            print("Result: ", addition(num1, num2))
         elseif choice == 2 then
-            print("Result: ", subtract(num1, num2))
+            print("Result: ", subtraction(num1, num2))
         elseif choice == 3 then
-            print("Result: ", multiply(num1, num2))
+            print("Result: ", multiplication(num1, num2))
         elseif choice == 4 then
-            print("Result: ", divide(num1, num2))
+            print("Result: ", division(num1, num2))
         else
             print("Invalid choice. Please try again.")
         end
