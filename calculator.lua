@@ -53,13 +53,13 @@ local function power(base, exponent)
     return math.pow(base, exponent) -- math library that provides the power function
 end
 
--- Table to store calculation history
+-- Table that stores calculation history
 local history = {}
 
--- Function to display history
+-- Function to display history (temporary)
 local function display_history()
     if #history == 0 then
-        print("No calculations performed yet.")
+        print("No calculations have been performed yet.")
     else
         print("\nCalculation History:")
         for i, entry in ipairs(history) do
