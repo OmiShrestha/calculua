@@ -53,6 +53,21 @@ local function power(base, exponent)
     return math.pow(base, exponent) -- math library that provides the power function
 end
 
+-- Table to store calculation history
+local history = {}
+
+-- Function to display history
+local function display_history()
+    if #history == 0 then
+        print("No calculations performed yet.")
+    else
+        print("\nCalculation History:")
+        for i, entry in ipairs(history) do
+            print(i .. ". " .. entry)
+        end
+    end
+end
+
 -- Main program loop
 while true do
     print("\n")
@@ -66,36 +81,37 @@ while true do
     print("5. Factorial")
     print("6. Square Root")
     print("7. Power")
-    print("8. Exit")
+    print("8. View History")
+    print("9. Exit")
 
-    io.write("Choose an option (1-8): ") -- allows user to choose an input a number
+    io.write("Choose an option (1-9): ") -- allows user to choose an input a number
     local choice = tonumber(io.read())
 
-    if choice == 8 then
+    if choice == 9 then
         print("Exiting the calculator.")
         break
-    end
-
-    if 
-        choice == 5 then
+    elseif choice == 8 then
+        display_history()
+    elseif choice == 5 then
         io.write("Enter a number to calculate its factorial: ")
         local num = tonumber(io.read())
-        print("Result: ", factorial(num))
-
-    elseif 
-        choice == 6 then
+        local result = factorial(num)
+        print("Result: ", result)
+        table.insert(history, "Factorial of " .. num .. " = " .. result)
+    elseif choice == 6 then
         io.write("Enter a number to calculate its square root: ")
         local num = tonumber(io.read())
-        print("Result: ", square_root(num))
-
-    elseif 
-        choice == 7 then
+        local result = square_root(num)
+        print("Result: ", result)
+        table.insert(history, "Square root of " .. num .. " = " .. result)
+    elseif choice == 7 then
         io.write("Enter the base number: ")
         local base = tonumber(io.read())
         io.write("Enter the exponent: ")
         local exponent = tonumber(io.read())
-        print("Result: ", power(base, exponent))
-
+        local result = power(base, exponent)
+        print("Result: ", result)
+        table.insert(history, base .. " ^ " .. exponent .. " = " .. result)
     else
         io.write("Enter the first number: ")
         local num1 = tonumber(io.read())
@@ -104,13 +120,21 @@ while true do
         local num2 = tonumber(io.read())
 
         if choice == 1 then
-            print("Result: ", addition(num1, num2))
+            local result = addition(num1, num2)
+            print("Result: ", result)
+            table.insert(history, num1 .. " + " .. num2 .. " = " .. result)
         elseif choice == 2 then
-            print("Result: ", subtraction(num1, num2))
+            local result = subtraction(num1, num2)
+            print("Result: ", result)
+            table.insert(history, num1 .. " - " .. num2 .. " = " .. result)
         elseif choice == 3 then
-            print("Result: ", multiplication(num1, num2))
+            local result = multiplication(num1, num2)
+            print("Result: ", result)
+            table.insert(history, num1 .. " * " .. num2 .. " = " .. result)
         elseif choice == 4 then
-            print("Result: ", division(num1, num2))
+            local result = division(num1, num2)
+            print("Result: ", result)
+            table.insert(history, num1 .. " / " .. num2 .. " = " .. result)
         else
             print("Invalid choice. Please try again.")
         end
