@@ -1,6 +1,6 @@
 ## Calculua
 
-Calculua is a simple terminal-based calculator program written in Lua. It provides basic arithmetic operations along with some additional features.
+Calculua is a terminal-based calculator program written in Lua. It provides basic arithmetic operations along with some additional features.
 
 ## Features
 
@@ -11,7 +11,7 @@ Calculua is a simple terminal-based calculator program written in Lua. It provid
 - Factorial 
 - Square Root
 - Power
-- View Calculation History (saved temporarily in `history.txt`)
+- View Calculation History (saved temporarily)
 
 ## How to Use
 
@@ -66,7 +66,3 @@ Result: 4.0
    ```bash
    lua calculator.lua
    ```
-
-## Notes
-
-- The calculation history is saved temporarily in a file named `history.txt` located in the same directory as the script. The history persists across sessions as long as the file is not deleted.
