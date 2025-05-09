@@ -55,7 +55,10 @@ end
 
 -- Main program loop
 while true do
-    print("\n ***** CALCULUA ******")
+    print("\n")
+    print(" *********************")
+    print(" *      CALCULUA     *")
+    print(" *********************")
     print("1. Addition")
     print("2. Subtraction")
     print("3. Multiplication")
