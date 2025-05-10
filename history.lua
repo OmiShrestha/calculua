@@ -1,5 +1,5 @@
 -- Author: Omi Shrestha
---history.lua
+-- history.lua
 -- This file contains the history of calculations performed by the calculator
 
 -- Table that stores calculation history
@@ -17,6 +17,7 @@ local function display_history()
     end
 end
 
+-- Returns the history table and display function
 return {
     history = history,
     display_history = display_history

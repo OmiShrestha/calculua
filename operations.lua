@@ -55,7 +55,7 @@ local function power(base, exponent)
     return math.pow(base, exponent)
 end
 
--- Return all functions as a table
+-- Returns all functions as a table
 return {
     addition = addition,
     subtraction = subtraction,
