@@ -11,7 +11,7 @@ Calculua is a terminal-based calculator program written in Lua. It provides basi
   5. Factorial 
   6. Square Root
   7. Power
-  8. View Calculation H$$istory (saved temporarily)
+  8. View Calculation History (saved temporarily)
 
 ## How to Use
 
@@ -67,3 +67,17 @@ Result: 4.0
    ```bash
    lua calculator.lua
    ```
+
+## File Structure
+
+The project consists of the following files:
+
+- `calculator.lua`: The main program file that provides the user interface and handles user input.
+- `operations.lua`: Contains the implementation of various mathematical operations such as addition, subtraction, multiplication, division, factorial, square root, and power.
+- `history.lua`: Manages the history of calculations performed during the session, allowing users to view their past calculations.
+
+## How It Works
+
+1. The `calculator.lua` file imports functions from `operations.lua` and `history.lua`.
+2. Based on the user's menu selection, the corresponding function from `operations.lua` is called to perform the calculation.
+3. The result of the calculation is displayed and stored in the history, which can be viewed using the `history.lua` module.
