@@ -11,7 +11,7 @@ Calculua is a terminal-based calculator program written in Lua. It provides basi
   5. Factorial 
   6. Square Root
   7. Power
-  8. View Calculation History (saved temporarily)
+  8. View Calculation H$$istory (saved temporarily)
 
 ## How to Use
 
@@ -50,7 +50,7 @@ Result: 4.0
 
 ## Requirements
 
-- Lua interpreter installed on your system.
+- Lua interpreter must be installed on your system.
 - homebrew is recommended for a Macbook.
 
 ## Installation

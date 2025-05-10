@@ -96,13 +96,13 @@ while true do
         io.write("Enter a number to calculate its factorial: ")
         local num = tonumber(io.read())
         local result = factorial(num)
-        print("Result: ", result)
+        print("Result: " .. result)
         table.insert(history, "Factorial of " .. num .. " = " .. result)
     elseif choice == 6 then
         io.write("Enter a number to calculate its square root: ")
         local num = tonumber(io.read())
         local result = square_root(num)
-        print("Result: ", result)
+        print("Result: " .. result)
         table.insert(history, "Square root of " .. num .. " = " .. result)
     elseif choice == 7 then
         io.write("Enter the base number: ")
@@ -110,7 +110,7 @@ while true do
         io.write("Enter the exponent: ")
         local exponent = tonumber(io.read())
         local result = power(base, exponent)
-        print("Result: ", result)
+        print("Result: " .. result)
         table.insert(history, base .. " ^ " .. exponent .. " = " .. result)
     else
         io.write("Enter the first number: ")
@@ -121,19 +121,19 @@ while true do
 
         if choice == 1 then
             local result = addition(num1, num2)
-            print("Result: ", result)
+            print("Result: " .. result)
             table.insert(history, num1 .. " + " .. num2 .. " = " .. result)
         elseif choice == 2 then
             local result = subtraction(num1, num2)
-            print("Result: ", result)
+            print("Result: " .. result)
             table.insert(history, num1 .. " - " .. num2 .. " = " .. result)
         elseif choice == 3 then
             local result = multiplication(num1, num2)
-            print("Result: ", result)
+            print("Result: " .. result)
             table.insert(history, num1 .. " * " .. num2 .. " = " .. result)
         elseif choice == 4 then
             local result = division(num1, num2)
-            print("Result: ", result)
+            print("Result: " .. result)
             table.insert(history, num1 .. " / " .. num2 .. " = " .. result)
         else
             print("Invalid choice. Please try again.")
