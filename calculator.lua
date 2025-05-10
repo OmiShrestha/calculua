@@ -1,72 +1,21 @@
+-- Author: Omi Shrestha
 -- Calculua: A Terminal Calculator
 
--- Function for addition
-local function addition(a, b)
-    return a + b
-end
+-- Imports functions from operations.lua & history.lua
+local operations = require("operations")
+local history = require("history")
 
--- Function for subtraction
-local function subtraction(a, b)
-    return a - b
-end
+-- Uses the imported functions
+local addition = operations.addition
+local subtraction = operations.subtraction
+local multiplication = operations.multiplication
+local division = operations.division
+local factorial = operations.factorial
+local square_root = operations.square_root
+local power = operations.power
 
--- Function for multiplication
-local function multiplication(a, b)
-    return a * b
-end
-
--- Function for division
-local function division(a, b)
-    if b == 0 then
-        return "Error: Division by zero"
-    else
-        return a / b
-    end
-end
-
--- Function for factorial
-local function factorial(n)
-    if n < 0 then
-        return "Error: Factorial of a negative number is undefined"
-    elseif n == 0 or n == 1 then
-        return 1
-    else
-        local result = 1
-        for i = 2, n do
-            result = result * i
-        end
-        return result
-    end
-end
-
--- Function for square root
-local function square_root(n)
-    if n < 0 then
-        return "Error: Square root of a negative number is undefined"
-    else
-        return math.sqrt(n) -- math library that provides the square root function
-    end
-end
-
--- Function for power
-local function power(base, exponent)
-    return math.pow(base, exponent) -- math library that provides the power function
-end
-
--- Table that stores calculation history
-local history = {}
-
--- Function to display history (temporary)
-local function display_history()
-    if #history == 0 then
-        print("No calculations have been performed yet.")
-    else
-        print("\nCalculation History:")
-        for i, entry in ipairs(history) do
-            print(i .. ". " .. entry)
-        end
-    end
-end
+-- Uses the imported history functions
+local display_history = history.display_history
 
 -- Main program loop
 while true do
@@ -97,13 +46,13 @@ while true do
         local num = tonumber(io.read())
         local result = factorial(num)
         print("Result: " .. result)
-        table.insert(history, "Factorial of " .. num .. " = " .. result)
+        table.insert(history.history, "Factorial of " .. num .. " = " .. result)
     elseif choice == 6 then
         io.write("Enter a number to calculate its square root: ")
         local num = tonumber(io.read())
         local result = square_root(num)
         print("Result: " .. result)
-        table.insert(history, "Square root of " .. num .. " = " .. result)
+        table.insert(history.history, "Square root of " .. num .. " = " .. result)
     elseif choice == 7 then
         io.write("Enter the base number: ")
         local base = tonumber(io.read())
@@ -111,7 +60,7 @@ while true do
         local exponent = tonumber(io.read())
         local result = power(base, exponent)
         print("Result: " .. result)
-        table.insert(history, base .. " ^ " .. exponent .. " = " .. result)
+        table.insert(history.history, base .. " ^ " .. exponent .. " = " .. result)
     else
         io.write("Enter the first number: ")
         local num1 = tonumber(io.read())
@@ -122,19 +71,19 @@ while true do
         if choice == 1 then
             local result = addition(num1, num2)
             print("Result: " .. result)
-            table.insert(history, num1 .. " + " .. num2 .. " = " .. result)
+            table.insert(history.history, num1 .. " + " .. num2 .. " = " .. result)
         elseif choice == 2 then
             local result = subtraction(num1, num2)
             print("Result: " .. result)
-            table.insert(history, num1 .. " - " .. num2 .. " = " .. result)
+            table.insert(history.history, num1 .. " - " .. num2 .. " = " .. result)
         elseif choice == 3 then
             local result = multiplication(num1, num2)
             print("Result: " .. result)
-            table.insert(history, num1 .. " * " .. num2 .. " = " .. result)
+            table.insert(history.history, num1 .. " * " .. num2 .. " = " .. result)
         elseif choice == 4 then
             local result = division(num1, num2)
             print("Result: " .. result)
-            table.insert(history, num1 .. " / " .. num2 .. " = " .. result)
+            table.insert(history.history, num1 .. " / " .. num2 .. " = " .. result)
         else
             print("Invalid choice. Please try again.")
         end
